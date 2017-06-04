@@ -1,0 +1,14 @@
+
+html, body {
+  height: 100%;
+}
+
+#nav ul li{
+  width: 20%;
+  float: left;
+}
+
+.example-input .ant-input {
+  width: 100px;
+  margin: 0 8px 8px 0;
+}

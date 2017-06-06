@@ -7,6 +7,7 @@ import Test from './components/Test';
 import Input from './components/Input';
 import date from './components/date';
 import Rate from './components/Rate';
+import mountNode from './components/mountNode';
 
 ReactDOM.render((
     <HashRouter history={hashHistory}>
@@ -28,3 +29,6 @@ ReactDOM.render((
         </div>
     </HashRouter>
 ), document.getElementById('router'));
+<div>
+    <Link>顶部导航</Link>
+</div>

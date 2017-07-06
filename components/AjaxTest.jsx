@@ -1,6 +1,7 @@
 import React from 'react';
 
-var UserGist = React.createClass({
+
+var AjaxTest = React.createClass({
     getInitialState: function() {
         return {
             username: '',
@@ -32,6 +33,11 @@ var UserGist = React.createClass({
     }
 });
 
-ReactDOM.render(
-    <UserGist source="https://api.github.com/users/octocat/gists" />
-);
+render()
+{
+    return (
+        <UserGist source="https://api.github.com/users/octocat/gists"/>
+    )
+}
+
+export default AjaxTest;

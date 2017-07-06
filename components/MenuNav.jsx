@@ -1,23 +1,24 @@
-import React from 'react';import { Menu, Icon } from 'antd';
+import React from 'react';
+import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-export default class mountNode extends React.Component {
-    constructor(props) {
+class MenuNav extends React.Component{
+    constructor(props){
         super(props);
-        this.state = { // define this.state in constructor
-            current: 'mail'
+
+        this.state = {
+            current: 'mail',
         }
-    }
+        var handleClick = (e) => {
+            console.log('click ', e);
+            this.setState({
+                current: e.key,
+            });
+        }
 
-
-    handleClick = (e) => {
-        console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
     }
-    render() {
+    render(){
         return (
             <Menu
                 onClick={this.handleClick}
@@ -46,5 +47,6 @@ export default class mountNode extends React.Component {
             </Menu>
         );
     }
-
 }
+
+export default MenuNav;

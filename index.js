@@ -15,7 +15,6 @@ import StepDemoB from './components/StepDemoB';
 import LoadingDemo from './components/LoadingDemo';
 import CascaderDemo from './components/CascaderDemo';
 import Message from './components/Message';
-import AjaxTest from './components/AjaxTest.jsx';
 import Card from './components/Card'
 
 ReactDOM.render((
@@ -80,11 +79,6 @@ ReactDOM.render((
             <br/>
             <div>
                 <Message />
-            </div>
-
-            <br/>
-            <div>
-                <AjaxTest />
             </div>
 
 

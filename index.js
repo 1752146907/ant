@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import ReactDOM from 'react-dom';
 import { Router, HashRouter, Route, hashHistory, Link } from 'react-router-dom';
 import './index.css';
@@ -15,6 +15,9 @@ import StepDemoB from './components/StepDemoB';
 import LoadingDemo from './components/LoadingDemo';
 import CascaderDemo from './components/CascaderDemo';
 import Message from './components/Message';
+import Login from './components/Login';
+import Paginations from './components/Pagination';
+import Dialogue from './components/Dialogue';
 import Card from './components/Card'
 
 ReactDOM.render((
@@ -81,6 +84,20 @@ ReactDOM.render((
                 <Message />
             </div>
 
+            <br/>
+            <div>
+                <Login />
+            </div>
+
+            <br/>
+            <div>
+                <Paginations />
+            </div>
+
+            <br/>
+            <div>
+                <Dialogue />
+            </div>
 
         </div>
     </HashRouter>

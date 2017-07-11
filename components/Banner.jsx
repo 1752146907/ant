@@ -35,6 +35,15 @@ export default class Banner extends React.Component {
                         The Fast Way Use Animation In React
                     </TweenOne>
                 </Element>
+                <Element prefixCls="banner-user-elem" key="2" style={{ background: 'url(http://s.amazeui.org/media/i/demos/bing-4.jpg)no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+                    <BgElement key="bg" className="bg" style={{ background: '#64CBCC', }}/>
+                    <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
+                        Ant Motion Banner
+                    </TweenOne>
+                    <TweenOne className="banner-user-text" animation={{ y: 130, opacity: 0, type: 'from', delay: 110 }}>
+                        The Fast Way Use Animation In React
+                    </TweenOne>
+                </Element>
             </BannerAnim>);
     }
 

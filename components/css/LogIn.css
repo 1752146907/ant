@@ -1,0 +1,24 @@
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+    width: 100%;
+}
+.login{
+    width:400px;
+    margin:0 auto;
+    padding:16px;
+    border:#f9f3f3 solid 1px;
+}
+.login-title{
+    font-size: 18px;
+    padding:8px 0px;
+    text-align:center;
+}
+.login-but{
+    width: 100%;
+    display: block;
+}

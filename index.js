@@ -18,10 +18,12 @@ import Message from './components/Message';
 import Login from './components/Login';
 import Paginations from './components/Pagination';
 import Dialogue from './components/Dialogue';
+import Wai from './components/Wai';
 import Card from './components/Card'
 
 ReactDOM.render((
     <HashRouter history={hashHistory}>
+
         <div id="nav">
             <ul>
                 <li><Link to="/">Home</Link></li>
@@ -98,7 +100,14 @@ ReactDOM.render((
             <div>
                 <Dialogue />
             </div>
-
+            <div>
+                <Wai />
+            </div>
         </div>
+
+
+
+        
+
     </HashRouter>
 ), document.getElementById('router'));

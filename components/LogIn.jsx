@@ -1,4 +1,5 @@
 import React from 'react';
+import reqwest from 'reqwest';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import './css/LogIn.css';
 
@@ -29,7 +30,7 @@ class LogInn extends React.Component {
             , method: 'post'
             , data: { usertype: 'member', password: '13929747075',username:'13929747075' }
             , success: function (resp) {
-                alert("ok")
+                alert("登陆成功！")
             }
         })
     }

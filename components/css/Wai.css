@@ -6,3 +6,9 @@
     margin: 16px 28px 16px 0;
     float: left;
 }
+.logoImg{
+    width: 78px;
+    height: 48px;
+    margin-top: 8px;
+    border-radius: 10%;
+}

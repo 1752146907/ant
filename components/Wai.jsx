@@ -3,19 +3,35 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import './css/Wai.css';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
+import reqwest from 'reqwest';
+
 
 export default class Wai extends React.Component{
     constructor(props){
         super(props);
         this.state = { // define this.state in constructor
-            isEditing: false
+            lis: '',
         }
+    }
+
+
+
+    componentWillMount() {
+        reqwest({
+            url: 'http://api.b2b-purchase.dingxingyun.cn/v1/apicategory/categories'
+            , method: 'GET'
+            , success: function (data) {
+                alert("获取成功！");
+                console.log(data);
+                this.lis = data;
+            }
+        })
     }
     render(){
         return (
             <Layout>
                 <Header className="header">
-                    <div className="logo" />
+                    <div className="logo"  style={{float:"left"}}><img className="logoImg" src={"http://pic.58pic.com/58pic/12/34/70/94u58PICwKE.jpg"} alt=""/></div>
                     <Menu
                         theme="dark"
                         mode="horizontal"
@@ -28,8 +44,6 @@ export default class Wai extends React.Component{
                         <Menu.Item key="4">nav 4</Menu.Item>
                         <Menu.Item key="5">nav 5</Menu.Item>
                         <Menu.Item key="6">nav 6</Menu.Item>
-                        <Menu.Item key="7">nav 7</Menu.Item>
-                        <Menu.Item key="8">nav 8</Menu.Item>
                     </Menu>
                 </Header>
                 <Layout>

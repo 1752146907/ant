@@ -5,29 +5,47 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 import reqwest from 'reqwest';
 
-
 export default class Wai extends React.Component{
     constructor(props){
         super(props);
         this.state = { // define this.state in constructor
-            lis: '',
+            menuList: [
+                {
+                   menu_name: '第一个'
+                },
+                {
+                    menu_name: '第二个'
+                },
+                {
+                    menu_name: '第三'
+                },
+                {
+                    menu_name: '第四'
+                },
+                {
+                    menu_name: 'nav5'
+                }
+            ],
+            topNav: null
         }
     }
 
 
-
     componentWillMount() {
+
+        var self = this;
         reqwest({
             url: 'http://api.b2b-purchase.dingxingyun.cn/v1/apicategory/categories'
             , method: 'GET'
-            , success: function (data) {
-                alert("获取成功！");
-                console.log(data);
-                this.lis = data;
+            , success: function (data){
+                self.setState({
+                    topNav: data
+                })
             }
-        })
+        });
     }
     render(){
+
         return (
             <Layout>
                 <Header className="header">
@@ -38,12 +56,12 @@ export default class Wai extends React.Component{
                         defaultSelectedKeys={['2']}
                         style={{ lineHeight: '64px' }}
                     >
-                        <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
-                        <Menu.Item key="4">nav 4</Menu.Item>
-                        <Menu.Item key="5">nav 5</Menu.Item>
-                        <Menu.Item key="6">nav 6</Menu.Item>
+                        {
+                            this.state.menuList.map(function(menu, index) {
+                                return <Menu.Item key={index}>{menu.menu_name}</Menu.Item>;
+                            })
+                        }
+
                     </Menu>
                 </Header>
                 <Layout>

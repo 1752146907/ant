@@ -16,7 +16,7 @@ import LoadingDemo from './components/LoadingDemo';
 import CascaderDemo from './components/CascaderDemo';
 import Message from './components/Message';
 import Login from './components/Login';
-import Paginations from './components/Pagination';
+import Paginations from './components/Paginations';
 import Dialogue from './components/Dialogue';
 import Wai from './components/Wai';
 import Card from './components/Card'

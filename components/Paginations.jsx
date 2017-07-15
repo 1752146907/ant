@@ -15,7 +15,7 @@ class Paginations extends React.Component {
                 total={185}
                 pageSize={2}
                 defaultPageSize={10}
-                pageSizeOptions={10}
+                pageSizeOptions={['10', '20', '30']}
                 showQuickJumper={true}
                 defaultCurrent={1}
             />

@@ -57,7 +57,7 @@ export default class Wai extends React.Component{
                         style={{ lineHeight: '64px' }}
                     >
                         {
-                            this.state.menuList.map(function(menu, index) {
+                                this.state.menuList.map(function(menu, index) {
                                 return <Menu.Item key={index}>{menu.menu_name}</Menu.Item>;
                             })
                         }

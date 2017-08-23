@@ -5,8 +5,6 @@ import './css/LogIn.css';
 
 const FormItem = Form.Item;
 
-
-
 class LogInn extends React.Component {
     constructor(props) {
         super(props);
@@ -24,14 +22,26 @@ class LogInn extends React.Component {
         });
     }
 
+    componentDidMount() {
+        this.props.form.setFieldsValue({
+            name: this.props.form.userName
+        });
+    }
+
     denglu(){
-        reqwest({
-            url: 'http://api.b2b-purchase.dingxingyun.cn/v1/users/login'
-            , method: 'post'
-            , data: { usertype: 'member', password: '13929747075',username:'13929747075' }
-            , success: function (resp) {
-                alert("登陆成功！")
-            }
+        this.props.form.validateFields((errors, values) => {
+            // if(this.props.form.userName.value === ''){
+            //     alert('请输入手机号！')
+            // }
+            console.log(name);
+            // reqwest({
+            //     url: 'http://api.b2b-purchase.dingxingyun.cn/v1/users/login'
+            //     , method: 'post'
+            //     , data: { usertype: 'member', password: '13929747075',username:'13929747075' }
+            //     , success: function (resp) {
+            //         alert("登陆成功！");
+            //     }
+            // })
         })
     }
 
@@ -47,7 +57,7 @@ class LogInn extends React.Component {
                     {getFieldDecorator('userName', {
                         rules: [{ required: true, message: '请输入您的用户账号!' }],
                     })(
-                        <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />
+                        <Input id="username" prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />
                     )}
                 </FormItem>
                 <FormItem>
